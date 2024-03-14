@@ -21,6 +21,12 @@ export const commonStyles = StyleSheet.create({
     color: StyleConfig.colors.darkGrey,
     // marginLeft:scale(10)
   },
+  fontLgWhite: {
+    fontSize: scale(16),
+    color: StyleConfig.colors.white,
+    fontWeight:"bold"
+    // marginLeft:scale(10)
+  },
   button: {
     backgroundColor: StyleConfig.colors.primary,
     paddingVertical: scale(15),
@@ -35,4 +41,21 @@ export const commonStyles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
   },
+  flexCenter:{
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center"
+  },
+  flexRow:{
+    display:"flex",
+    flexDirection:"row",
+    alignItems:"center"
+  },
+  loader:{
+    display:"flex",
+    flex:1,
+    justifyContent:"center",
+    alignItems:"center"
+  }
+
 });

@@ -3,9 +3,10 @@ import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-naviga
 import { RouteProp } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Home from '../screens/Home/Home';
-import Wallet from '../screens/Wallet/Wallet';
 import { scale } from '../utils/utils';
 import StyleConfig from '../utils/StyleConfig';
+import Favorite from '../screens/Favorite/Favorite';
+
 
 type RootTabParamList = {
   Home: undefined;
@@ -47,18 +48,17 @@ export function MyTabs() {
         },
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-          if (route.name === 'Flights') {
+          if (route.name === 'Books') {
             iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Bookings') {
+          } else if (route.name === 'Favorite') {
             iconName = focused ? 'wallet' : 'wallet-outline';
           } 
           return <Icon name={iconName} size={28} color={StyleConfig.colors.primary} />;
         },
       })}
     >
-      <Tab.Screen name="Flights" component={Home} />
-      <Tab.Screen name="Bookings" component={Wallet} />
-      {/* <Tab.Screen name="Guide" component={GuideTabs} /> */}
+      <Tab.Screen name="Books" component={Home} />
+      <Tab.Screen name="Favorite" component={Favorite} />
     </Tab.Navigator>
   );
 }
